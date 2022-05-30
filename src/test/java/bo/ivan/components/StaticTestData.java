@@ -1,6 +1,6 @@
 package bo.ivan.components;
 
-public class TestDataStatic {
+public class StaticTestData {
     public String firstName = "Ivan",
                 lastName = "Ivanov",
                 fullName = String.format("%s %s", firstName, lastName),

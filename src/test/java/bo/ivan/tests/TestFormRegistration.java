@@ -1,14 +1,14 @@
 package bo.ivan.tests;
 
 import bo.ivan.components.FakerTestData;
-import bo.ivan.components.TestDataStatic;
+import bo.ivan.components.StaticTestData;
 import bo.ivan.pages.RegistrationPage;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.*;
 
 public class TestFormRegistration {
     RegistrationPage registrationPage = new RegistrationPage();
-    TestDataStatic dataStatic = new TestDataStatic();
+    StaticTestData dataStatic = new StaticTestData();
     FakerTestData fakerTestData = new FakerTestData();
 
     @BeforeAll

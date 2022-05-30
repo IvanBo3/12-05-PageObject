@@ -2,7 +2,7 @@ package bo.ivan.pages;
 
 import bo.ivan.components.BirthdayCalendar;
 import bo.ivan.components.SelectorsTestForm;
-import bo.ivan.components.TestDataStatic;
+import bo.ivan.components.StaticTestData;
 import com.codeborne.selenide.Selenide;
 
 import static com.codeborne.selenide.Condition.text;
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class RegistrationPage {
     BirthdayCalendar birthdayCalendar = new BirthdayCalendar();
     SelectorsTestForm selectorsTestForm = new SelectorsTestForm();
-    TestDataStatic dataStatic = new TestDataStatic();
+    StaticTestData dataStatic = new StaticTestData();
 
 
     //actions
