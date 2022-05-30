@@ -2,6 +2,7 @@ package bo.ivan.pages;
 
 import bo.ivan.components.BirthdayCalendar;
 import bo.ivan.components.SelectorsTestForm;
+import bo.ivan.components.TestDataStatic;
 import com.codeborne.selenide.Selenide;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,13 +12,14 @@ import static com.codeborne.selenide.Selenide.$;
 public class RegistrationPage {
     BirthdayCalendar birthdayCalendar = new BirthdayCalendar();
     SelectorsTestForm selectorsTestForm = new SelectorsTestForm();
+    TestDataStatic dataStatic = new TestDataStatic();
 
 
     //actions
     public RegistrationPage openStartPage() {
         Selenide.open("/automation-practice-form");
 //        Selenide.zoom(0.75);
-        selectorsTestForm.titlePracticeForm.shouldHave(text(selectorsTestForm.practiceFormTitle));
+        selectorsTestForm.titlePracticeForm.shouldHave(text(dataStatic.practiceFormTitle));
         return this;
     }
 
@@ -90,7 +92,7 @@ public class RegistrationPage {
 
     //asserts
     public RegistrationPage checkTitle(String title) {
-        selectorsTestForm.titleResult.shouldHave(text(selectorsTestForm.resultTableTitle));
+        selectorsTestForm.titleResult.shouldHave(text(dataStatic.resultTableTitle));
         return this;
     }
 

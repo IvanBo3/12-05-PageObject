@@ -19,7 +19,9 @@ public class TestDataStatic {
                 city = "Karnal";
 
     String[] picturePathArr = picturePath.split("/");
-        public String pictureName = picturePathArr[picturePathArr.length - 1];
+        public String pictureName = picturePathArr[picturePathArr.length - 1],
+                practiceFormTitle = "Student Registration Form",
+                resultTableTitle = "Thanks for submitting the form";
 
 
 }

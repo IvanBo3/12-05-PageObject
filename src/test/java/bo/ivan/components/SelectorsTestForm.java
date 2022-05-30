@@ -21,8 +21,4 @@ public class SelectorsTestForm {
             titleResult = $("#example-modal-sizes-title-lg"),
             tableResponsive = $("div.table-responsive"),
             titlePracticeForm = $(".practice-form-wrapper");
-
-    public String
-            practiceFormTitle = "Student Registration Form",
-            resultTableTitle = "Thanks for submitting the form";
 }
