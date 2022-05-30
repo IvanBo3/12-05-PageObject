@@ -1,5 +1,6 @@
 package bo.ivan.tests;
 
+import bo.ivan.components.FakerTestData;
 import bo.ivan.components.TestDataStatic;
 import bo.ivan.pages.RegistrationPage;
 import com.codeborne.selenide.Configuration;
@@ -8,6 +9,7 @@ import org.junit.jupiter.api.*;
 public class TestFormRegistration {
     RegistrationPage registrationPage = new RegistrationPage();
     TestDataStatic dataStatic = new TestDataStatic();
+    FakerTestData fakerTestData = new FakerTestData();
 
     @BeforeAll
     static void baseStartPage () {
@@ -19,16 +21,16 @@ public class TestFormRegistration {
     void formTest () {
         registrationPage
                 .openStartPage()
-                .setFirstName(dataStatic.firstName)
-                .setLastName(dataStatic.lastName)
-                .setEmail(dataStatic.userEmail)
+                .setFirstName(fakerTestData.firstName)
+                .setLastName(fakerTestData.lastName)
+                .setEmail(fakerTestData.userEmail)
                 .setGender(dataStatic.gender)
                 .setNumber(dataStatic.userNumber)
                 .setBirthDay(dataStatic.dayOfBirth, dataStatic.monthOfBirth, dataStatic.yearOfBirth)
                 .setSubject(dataStatic.subjects)
                 .setHobbies(dataStatic.hobbies)
                 .uploadPicture(dataStatic.picturePath)
-                .setCurrentAddress(dataStatic.currentAddress)
+                .setCurrentAddress(fakerTestData.currentAddress)
                 .setState(dataStatic.state)
                 .setCity(dataStatic.city)
                 .submitForm();
@@ -36,15 +38,15 @@ public class TestFormRegistration {
         //asserts
         registrationPage
                 .checkTitle(dataStatic.resultTableTitle)
-                .checkResult("Student Name", dataStatic.fullName)
-                .checkResult("Student Email", dataStatic.userEmail)
+                .checkResult("Student Name", fakerTestData.fullName)
+                .checkResult("Student Email", fakerTestData.userEmail)
                 .checkResult("Gender", dataStatic.gender)
                 .checkResult("Mobile", dataStatic.userNumber)
                 .checkResult("Date of Birth", dataStatic.dateOfBirth)
                 .checkResult("Subjects", dataStatic.subjects)
                 .checkResult("Hobbies", dataStatic.hobbies)
                 .checkResult("Picture", dataStatic.pictureName)
-                .checkResult("Address", dataStatic.currentAddress)
+                .checkResult("Address", fakerTestData.currentAddress)
                 .checkResult("State and City", dataStatic.state + " " + dataStatic.city);
     }
 }
