@@ -32,6 +32,19 @@ public class TestFormRegistration {
                 .setState(dataStatic.state)
                 .setCity(dataStatic.city)
                 .submitForm();
-    }
 
+        //asserts
+        registrationPage
+                .checkTitle(dataStatic.resultTableTitle)
+                .checkResult("Student Name", dataStatic.fullName)
+                .checkResult("Student Email", dataStatic.userEmail)
+                .checkResult("Gender", dataStatic.gender)
+                .checkResult("Mobile", dataStatic.userNumber)
+                .checkResult("Date of Birth", dataStatic.dateOfBirth)
+                .checkResult("Subjects", dataStatic.subjects)
+                .checkResult("Hobbies", dataStatic.hobbies)
+                .checkResult("Picture", dataStatic.pictureName)
+                .checkResult("Address", dataStatic.currentAddress)
+                .checkResult("State and City", dataStatic.state + " " + dataStatic.city);
+    }
 }
