@@ -1,8 +1,7 @@
-package bo.ivan;
+package bo.ivan.pages;
 
 import bo.ivan.components.BirthdayCalendar;
 import bo.ivan.components.SelectorsTestForm;
-import bo.ivan.components.TestDataStatic;
 import com.codeborne.selenide.Selenide;
 
 import static com.codeborne.selenide.Condition.text;
